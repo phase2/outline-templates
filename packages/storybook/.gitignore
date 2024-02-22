@@ -1,0 +1,29 @@
+# IDE Specific
+.history
+.vscode
+
+# External Dependencies
+node_modules
+
+# Build Artifacts
+dist
+build
+storybook-static
+
+# Environment Variables
+
+# While as a rule, .env files are not committed, we do use 
+# .env files at types for some benign environment variables. 
+# These are able to be committed as they do not contain any 
+# sensitive information. The .env.local files, however, 
+# contain sensitive information and should never be committed.
+# 
+# Remove the following line if you want to commit .env files
+.env
+.env.local
+
+# Log Files
+*.log
+
+# Operating System Files
+.DS_Store

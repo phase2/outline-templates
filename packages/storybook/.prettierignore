@@ -1,0 +1,18 @@
+# Directories
+.changeset/
+.history/
+.yarn/
+docs/
+dist/
+build/
+node_modules/
+storybook-static/
+
+# File Patterns
+*.d.ts
+
+# Specific Files
+package-lock.json
+yarn.lock
+
+# Other

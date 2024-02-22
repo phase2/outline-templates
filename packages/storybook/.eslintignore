@@ -1,0 +1,19 @@
+# Directories
+.changeset/
+.history/
+.husky/
+.github/
+.turbo/
+.vscode/
+.yarn/
+docs/
+dist/
+build/
+node_modules/
+storybook-static/
+
+# File Patterns
+
+# Specific Files
+
+# Other

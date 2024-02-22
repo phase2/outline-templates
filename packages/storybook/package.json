@@ -1,0 +1,83 @@
+{
+  "name": "@phase2/sample-storybook-web-components",
+  "description": "Outline + Storybook + Web Components",
+  "main": "dist/outline.js",
+  "module": "dist/outline.js",
+  "files": [
+    "dist/",
+    ".prettierrc.json",
+    ".eslintrc.json",
+    "tailwind.config.js",
+    "outline.theme.css"
+  ],
+  "type": "module",
+  "private": true,
+  "author": {
+    "name": "Phase2 Technology",
+    "url": "https://phase2technology.com"
+  },
+  "license": "BSD-3-Clause",
+  "publishConfig": {},
+  "scripts": {
+    "start": "yarn dev",
+    "dev": "yarn watch",
+    "watch": "npm-run-all -n -p 'watch:**'",
+    "watch:bundle": "yarn vite build --watch",
+    "watch:vite": "yarn vite preview --port 6001 --open",
+    "watch:storybook": "storybook dev -p 6002",
+    "build": "npm-run-all -n -s 'build:**'",
+    "build:vite": "yarn vite build",
+    "build:storybook": "NODE_ENV=production storybook build -o storybook-static",
+    "clean": "npm-run-all -n -s 'clean:**'",
+    "clean:dist": "rimraf dist",
+    "clean:storybook": "rimraf storybook-static",
+    "clean:modules": "rimraf node_modules",
+    "reset": "yarn clean && yarn install",
+    "restart": "yarn reset && yarn dev"
+  },
+  "keywords": [
+    "web-components",
+    "typescript",
+    "lit"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "@phase2/outline-adopted-stylesheets-controller": "^1.0.1",
+    "@phase2/outline-config": "^0.0.13",
+    "@phase2/outline-core": "^0.2.6",
+    "@phase2/outline-core-alert": "^0.0.1",
+    "@phase2/outline-core-link": "^0.0.10",
+    "lit": "^3.1.2"
+  },
+  "devDependencies": {
+    "@storybook/addon-essentials": "^7.6.17",
+    "@storybook/addon-links": "^7.6.17",
+    "@storybook/blocks": "^7.6.17",
+    "@storybook/web-components": "^7.6.17",
+    "@storybook/web-components-vite": "^7.6.17",
+    "@types/eslint": "^8",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "@typescript-eslint/eslint-plugin": "^5.0.0",
+    "@typescript-eslint/parser": "^5.0.0",
+    "eslint": "^8.56.0",
+    "eslint-plugin-storybook": "^0.8.0",
+    "npm-run-all": "^4.1.5",
+    "postcss": "^8.3.0",
+    "postcss-discard-comments": "^5.1.0",
+    "postcss-nested-import": "^1.3.0",
+    "postcss-nesting": "^12.0.2",
+    "postcss-preset-env": "^9.3.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "rimraf": "^3.0.2",
+    "rsync": "^0.6.1",
+    "storybook": "^7.6.17",
+    "ts-lit-plugin": "^2.0.2",
+    "typescript": "^5.3.3",
+    "vite": "^5.1.4"
+  },
+  "packageManager": "yarn@4.1.0"
+}
