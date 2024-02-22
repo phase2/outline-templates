@@ -23,7 +23,7 @@
     "dev": "yarn watch",
     "watch": "npm-run-all -n -p 'watch:**'",
     "watch:bundle": "yarn vite build --watch",
-    "watch:vite": "yarn vite preview --port 6001 --open",
+    "watch:vite": "yarn vite dev --port 6001 --open",
     "watch:storybook": "storybook dev -p 6002",
     "build": "npm-run-all -n -s 'build:**'",
     "build:vite": "yarn vite build",
