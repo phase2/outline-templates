@@ -27,8 +27,6 @@ export default defineConfig({
       formats: [
         // 'es' is the default format, modules are bundled to .mjs files
         'es',
-        // Uncomment the following line to generate CommonJS bundles.
-        'cjs',
       ],
     },
     minify: false,
