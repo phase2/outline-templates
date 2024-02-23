@@ -7,9 +7,11 @@ import postcssPresetEnv from 'postcss-preset-env';
 import postcssNested from 'postcss-nested';
 import postcssNestedImport from 'postcss-nested-import';
 import postcssDiscardComments from 'postcss-discard-comments';
+import ts from 'vite-plugin-ts';
 
 // https://vitejs.dev/config/
 export default defineConfig({
+  plugins: [ts()],
   base: './',
   define: {
     'Reflect.decorate': 'undefined',
