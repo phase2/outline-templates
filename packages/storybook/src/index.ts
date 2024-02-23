@@ -10,7 +10,7 @@
 // Importing specific components from the `src/components` directory
 // import { Component1 } from './components/component1';
 // import { Component2 } from './components/component2';
-import { OutlineAlert } from './components/shared/outline-alert/outline-alert';
+//import { OutlineAlert } from './components/shared/outline-alert/outline-alert';
 import { OutlineLink } from './components/shared/outline-link/outline-link';
 // import { OutlineCoreAlert } from '@phase2/outline-core-alert';
 // Add more component imports as needed...
@@ -23,7 +23,7 @@ import { AdoptedStylesheets } from '@phase2/outline-adopted-stylesheets-controll
 
 // Exporting all imported components and controllers for external use
 export {
-  OutlineAlert,
+  // OutlineAlert,
   OutlineLink,
   // OutlineCoreAlert,
   // Component1,
