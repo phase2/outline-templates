@@ -4,6 +4,7 @@
 
 # External Dependencies
 node_modules
+.yarn/install-state.gz
 
 # Build Artifacts
 dist
