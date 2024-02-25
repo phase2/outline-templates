@@ -41,12 +41,6 @@ jobs:
         with:
           node-version-file: "packages/storybook/.nvmrc"
           cache: "yarn"
-          cache-dependency-path: |
-            **/yarn.lock
-            **/node_modules
-            **/dist
-            **/.yarn
-            **/.turbo
 
       - name: Initialize .npmrc
         run: cat $NPM_CONFIG_USERCONFIG >> .npmrc
@@ -78,12 +72,6 @@ jobs:
         with:
           node-version-file: ".nvmrc"
           cache: "yarn"
-          cache-dependency-path: |
-            **/yarn.lock
-            **/node_modules
-            **/dist
-            **/.yarn
-            **/.turbo
 
       - name: Initialize .npmrc
         run: cat $NPM_CONFIG_USERCONFIG >> .npmrc
