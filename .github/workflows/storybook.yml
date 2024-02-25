@@ -1,0 +1,89 @@
+# Build Workflows for Outline.js
+name: Storybook Template
+# Controls when the action will run. Triggers the workflow on push or pull request
+on:
+  # Which branches to test on push/merge.
+  push:
+    branches:
+      - main
+  # Which branches to test on pull request.
+  pull_request:
+    branches:
+      - main
+      - /^issue/
+      - /^task/
+      - /^feature/
+      - /^bug/
+      - /^test/
+
+# The jobs for the build workflow.
+jobs:
+  # Basic setup job to prepare codebase.
+  setup:
+    name: Install
+    runs-on: ubuntu-latest
+    container:
+      image: node:lts
+    # The steps for the setup job.
+    steps:
+      # @see https://github.com/marketplace/actions/checkout
+      - name: Checkout Codebase
+        uses: actions/checkout@v4
+
+      - name: Use local Yarn version
+        run: echo "$(pwd)/.yarn/releases" >> $GITHUB_PATH
+
+      # @see https://github.com/marketplace/actions/setup-node-js-environment
+      - uses: actions/setup-node@v4
+        with:
+          node-version-file: ".nvmrc"
+          cache: "yarn"
+          cache-dependency-path: |
+            **/yarn.lock
+            **/node_modules
+            **/dist
+            **/.yarn
+            **/.turbo
+
+      - name: Initialize .npmrc
+        run: cat $NPM_CONFIG_USERCONFIG >> .npmrc
+
+      - name: Install Dependencies
+        run: yarn install
+
+  # Job to run build, and basic assurances the codebase is ready for additional processing.
+  build:
+    name: Build
+    runs-on: ubuntu-latest
+    container:
+      image: node:lts
+    needs: ["setup"]
+    # The steps for the setup job.
+    steps:
+      # @see https://github.com/marketplace/actions/checkout
+      - name: Checkout Codebase
+        uses: actions/checkout@v4
+
+      - name: Use local Yarn version
+        run: echo "$(pwd)/.yarn/releases" >> $GITHUB_PATH
+
+      # @see https://github.com/marketplace/actions/setup-node-js-environment
+      - uses: actions/setup-node@v4
+        with:
+          node-version-file: ".nvmrc"
+          cache: "yarn"
+          cache-dependency-path: |
+            **/yarn.lock
+            **/node_modules
+            **/dist
+            **/.yarn
+            **/.turbo
+
+      - name: Initialize .npmrc
+        run: cat $NPM_CONFIG_USERCONFIG >> .npmrc
+
+      - name: Install Dependencies
+        run: yarn install
+
+      - name: Build Application
+        run: yarn build
