@@ -11,11 +11,19 @@ import ts from 'vite-plugin-ts';
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  base: './',
-  plugins: [ts()],
-  define: {
-    'Reflect.decorate': 'undefined',
-  },
+  // base: './',
+  // plugins: [ts()],
+  // define: {
+  //   'Reflect.decorate': 'undefined',
+  // },
+  // esbuild: {
+  //   tsconfigRaw: {
+  //     compilerOptions: {
+  //       experimentalDecorators: true,
+  //       emitDecoratorMetadata: true,
+  //     },
+  //   },
+  // },
   css: {
     postcss: {
       plugins: [
@@ -63,11 +71,13 @@ export default defineConfig({
             ]),
         ),
       },
-      formats: [
-        // 'es' is the default format, modules are bundled to .mjs files
-        'es',
-      ],
+      formats: ['es'],
     },
-    minify: false,
+    // minify: false,
+    // rollupOptions: {
+    //   output: {
+    //     dir: 'dist', // Specify the correct directory for Vite to serve files
+    //   },
+    // },
   },
 });

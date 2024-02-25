@@ -2596,6 +2596,7 @@ __metadata:
     "@types/react-dom": "npm:^18"
     "@typescript-eslint/eslint-plugin": "npm:^5.0.0"
     "@typescript-eslint/parser": "npm:^5.0.0"
+    esbuild-decorators: "npm:^1.0.0"
     eslint: "npm:^8.56.0"
     eslint-plugin-storybook: "npm:^0.8.0"
     glob: "npm:^10.3.10"
@@ -6035,6 +6036,16 @@ __metadata:
     is-date-object: "npm:^1.0.1"
     is-symbol: "npm:^1.0.2"
   checksum: 10c0/0886572b8dc075cb10e50c0af62a03d03a68e1e69c388bd4f10c0649ee41b1fbb24840a1b7e590b393011b5cdbe0144b776da316762653685432df37d6de60f1
+  languageName: node
+  linkType: hard
+
+"esbuild-decorators@npm:^1.0.0":
+  version: 1.0.0
+  resolution: "esbuild-decorators@npm:1.0.0"
+  peerDependencies:
+    esbuild: ">=0.14.0"
+    typescript: ">=4.7.0"
+  checksum: 10c0/d9f488ec0b29863bb64de2401c8d14c2e05872f492486fe3448f5bbb80e1f1f56691e4f9f5c119e76d4dce9f6e2509c3bbbe13b0fff2efaf91e50c8d6dfb0a6b
   languageName: node
   linkType: hard
 

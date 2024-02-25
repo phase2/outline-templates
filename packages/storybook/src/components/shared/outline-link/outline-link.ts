@@ -1,6 +1,6 @@
 import { customElement } from 'lit/decorators.js';
-import { html } from 'lit';
-import { OutlineCoreLink } from '@phase2/outline-core-link';
+import { LitElement, html } from 'lit';
+// import { OutlineCoreLink } from '@phase2/outline-core-link';
 import globalStyles from './styles/outline-link.global.css?inline';
 import encapsulatedStyles from './styles/outline-link.encapsulated.css?inline';
 import { AdoptedStylesheets } from '@phase2/outline-adopted-stylesheets-controller';
@@ -13,7 +13,7 @@ import { AdoptedStylesheets } from '@phase2/outline-adopted-stylesheets-controll
  * @extends OutlineCoreLink
  */
 @customElement('outline-link')
-export class OutlineLink extends OutlineCoreLink {
+export class OutlineLink extends LitElement {
   GlobalStylesheets: AdoptedStylesheets | undefined = new AdoptedStylesheets(
     this,
     globalStyles,
@@ -29,11 +29,11 @@ export class OutlineLink extends OutlineCoreLink {
       : undefined;
     return root;
   }
-  // render() {
-  //   return html` <div class="encapsulated-container">
-  //     <slot></slot>
-  //   </div>`;
-  // }
+  render() {
+    return html` <div class="encapsulated-container">
+      <slot></slot>
+    </div>`;
+  }
 }
 
 /**
