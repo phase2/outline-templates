@@ -1,4 +1,4 @@
-import type { StorybookConfig } from '@storybook/web-components-vite';
+import { StorybookConfig } from '@storybook/web-components-vite';
 import { mergeConfig } from 'vite';
 
 const config: StorybookConfig = {
@@ -8,7 +8,7 @@ const config: StorybookConfig = {
     name: '@storybook/web-components-vite',
     options: {},
   },
-  staticDirs: ['../public', '../dist'],
+  staticDirs: ['../public'],
   async viteFinal(config, { configType }) {
     // Be sure to return the customized config
     return mergeConfig(config, {

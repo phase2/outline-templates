@@ -21,8 +21,7 @@
   "scripts": {
     "start": "yarn dev",
     "dev": "yarn watch",
-    "watch": "yarn build:vite && npm-run-all -n -p 'watch:**'",
-    "watch:bundle": "yarn build:vite --watch",
+    "watch": "npm-run-all -n -p 'watch:**'",
     "watch:vite": "yarn vite dev --port 6001",
     "watch:storybook": "yarn storybook dev -p 6002",
     "build": "npm-run-all -n -s 'build:**'",
