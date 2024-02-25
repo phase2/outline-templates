@@ -30,13 +30,16 @@ jobs:
       - name: Checkout Codebase
         uses: actions/checkout@v4
 
+      - name: Move to correct directory
+        run: cd packages/storybook
+
       - name: Use local Yarn version
         run: echo "$(pwd)/.yarn/releases" >> $GITHUB_PATH
 
       # @see https://github.com/marketplace/actions/setup-node-js-environment
       - uses: actions/setup-node@v4
         with:
-          node-version-file: ".nvmrc"
+          node-version-file: "packages/storybook/.nvmrc"
           cache: "yarn"
           cache-dependency-path: |
             **/yarn.lock
@@ -63,6 +66,9 @@ jobs:
       # @see https://github.com/marketplace/actions/checkout
       - name: Checkout Codebase
         uses: actions/checkout@v4
+
+      - name: Move to correct directory
+        run: cd packages/storybook
 
       - name: Use local Yarn version
         run: echo "$(pwd)/.yarn/releases" >> $GITHUB_PATH
