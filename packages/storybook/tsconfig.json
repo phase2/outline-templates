@@ -23,6 +23,6 @@
     "useDefineForClassFields": false,
     "esModuleInterop": true
   },
-  "include": ["src/**/*.ts"],
+  "include": ["src/**/*.ts", "node_modules/@phase2/**/*.ts"],
   "exclude": ["node_modules"]
 }

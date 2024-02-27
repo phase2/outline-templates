@@ -32,7 +32,8 @@
     "clean:storybook": "rimraf storybook-static",
     "clean:modules": "rimraf node_modules",
     "reset": "yarn clean && yarn install",
-    "restart": "yarn reset && yarn dev"
+    "restart": "yarn reset && yarn dev",
+    "postinstall": "patch-package"
   },
   "keywords": [
     "web-components",
@@ -47,7 +48,7 @@
     "@phase2/outline-config": "^0.0.14",
     "@phase2/outline-core": "^0.2.7",
     "@phase2/outline-core-alert": "^0.0.2",
-    "@phase2/outline-core-link": "^0.0.11",
+    "@phase2/outline-core-link": "^0.0.14",
     "lit": "^3.1.2"
   },
   "devDependencies": {
@@ -66,6 +67,7 @@
     "eslint-plugin-storybook": "^0.8.0",
     "glob": "^10.3.10",
     "npm-run-all": "^4.1.5",
+    "patch-package": "^8.0.0",
     "postcss": "^8.3.0",
     "postcss-discard-comments": "^5.1.0",
     "postcss-load-config": "^5.0.3",
