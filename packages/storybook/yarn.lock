@@ -2533,12 +2533,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@phase2/outline-adopted-stylesheets-controller@npm:^1.0.2":
-  version: 1.0.2
-  resolution: "@phase2/outline-adopted-stylesheets-controller@npm:1.0.2"
+"@phase2/outline-adopted-stylesheets-controller@npm:^1.0.4":
+  version: 1.0.4
+  resolution: "@phase2/outline-adopted-stylesheets-controller@npm:1.0.4"
   dependencies:
     lit: "npm:^3.1.2"
-  checksum: 10c0/fc7f2e68bbf121074ab4b4e7d695adde09b5468c1dc0a46508ddcbb40a2bbdee2410b54fae3a6c3dcf8fd03a589cdd5c4cf9c3a85f1aba35caaccff72bd2801b
+  checksum: 10c0/c5926a9391ad052802a4da1a66f7211c2c647ccb6cdf82de72c66e5207a096c0f9bf3d2259fdc0d5b6ebffa13595efa6574523591305fcf862ed416a5da14167
   languageName: node
   linkType: hard
 
@@ -2549,21 +2549,23 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@phase2/outline-core-alert@npm:^0.0.2":
-  version: 0.0.2
-  resolution: "@phase2/outline-core-alert@npm:0.0.2"
+"@phase2/outline-core-alert@npm:^0.0.4":
+  version: 0.0.4
+  resolution: "@phase2/outline-core-alert@npm:0.0.4"
   dependencies:
+    "@phase2/outline-adopted-stylesheets-controller": "npm:^1.0.4"
     lit: "npm:^3.1.2"
-  checksum: 10c0/9398f151f3be9d6d44252075bbc16a8a97973711828a1a4cac45a7f7d620d5faf8d593a45c9572a38b071a04f29b2de40c5459cb74f508a242573832286d401d
+  checksum: 10c0/63035f75fb726630bc024e8987de7e1b591bf991628608cf8d87d16b684791f7b9c9a6414b007887a67b8dd76dde9fc53675fbc5e2c6c3e0d249adfd7f1eaf99
   languageName: node
   linkType: hard
 
-"@phase2/outline-core-link@npm:^0.0.14":
-  version: 0.0.14
-  resolution: "@phase2/outline-core-link@npm:0.0.14"
+"@phase2/outline-core-link@npm:^0.0.16":
+  version: 0.0.16
+  resolution: "@phase2/outline-core-link@npm:0.0.16"
   dependencies:
+    "@phase2/outline-adopted-stylesheets-controller": "npm:^1.0.4"
     lit: "npm:^3.1.2"
-  checksum: 10c0/6b2aa4d8ff93f4934cb1f0136a7f0c324e5c38fb40739e163b6f1c97ed610a15b1f4b7e7ac936769a3c8a78d01034bdbb1dbaebe07e874d5873bfb56f052e83f
+  checksum: 10c0/ec614c2e53b83caba268789b66797183638a3ee687b0a42386fbdbceff1b0fe4ec6ca6be77afc3ae3b5053c246dedcea97568f152c5c68884c371688ff22e391
   languageName: node
   linkType: hard
 
@@ -2576,15 +2578,26 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@phase2/outline-docs@npm:^0.0.21":
+  version: 0.0.21
+  resolution: "@phase2/outline-docs@npm:0.0.21"
+  dependencies:
+    "@phase2/outline-core": "npm:^0.2.7"
+    tslib: "npm:^2.1.0"
+  checksum: 10c0/5c7f6a21c044072636ecdbda50ec57fb8d6fce6c0c7ff9023c852d75145f3bef779f975529d9c4fea86b44e90648b575435a19ecfa3bc6326a01c6c65f9d6b2e
+  languageName: node
+  linkType: hard
+
 "@phase2/sample-storybook-web-components@workspace:.":
   version: 0.0.0-use.local
   resolution: "@phase2/sample-storybook-web-components@workspace:."
   dependencies:
-    "@phase2/outline-adopted-stylesheets-controller": "npm:^1.0.2"
+    "@phase2/outline-adopted-stylesheets-controller": "npm:^1.0.4"
     "@phase2/outline-config": "npm:^0.0.14"
     "@phase2/outline-core": "npm:^0.2.7"
-    "@phase2/outline-core-alert": "npm:^0.0.2"
-    "@phase2/outline-core-link": "npm:^0.0.14"
+    "@phase2/outline-core-alert": "npm:^0.0.4"
+    "@phase2/outline-core-link": "npm:^0.0.16"
+    "@phase2/outline-docs": "npm:^0.0.21"
     "@storybook/addon-essentials": "npm:^7.6.17"
     "@storybook/addon-links": "npm:^7.6.17"
     "@storybook/blocks": "npm:^7.6.17"

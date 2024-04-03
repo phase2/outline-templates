@@ -1,3 +1,16 @@
+:root {
+  --outline-core-link--color: #0000ff;
+  --outline-core-link--text-decoration: none;
+  --outline-core-link--color-hover: #808080;
+  --outline-core-link--text-decoration-hover: underline;
+  --outline-core-link--color-focus: #808080;
+  --outline-core-link--text-decoration-focus: underline;
+  --outline-core-link--transition-property: color, background-color,
+    border-color, text-decoration-color, fill, stroke;
+  --outline-core-link--transition-duration: 150ms;
+  --outline-core-link--transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
 body {
   font-family: Roboto, sans-serif;
   font-size: 16px;

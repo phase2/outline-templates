@@ -11,19 +11,6 @@ import ts from 'vite-plugin-ts';
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  // base: './',
-  // plugins: [ts()],
-  // define: {
-  //   'Reflect.decorate': 'undefined',
-  // },
-  // esbuild: {
-  //   tsconfigRaw: {
-  //     compilerOptions: {
-  //       experimentalDecorators: true,
-  //       emitDecoratorMetadata: true,
-  //     },
-  //   },
-  // },
   css: {
     postcss: {
       plugins: [
@@ -53,13 +40,9 @@ export default defineConfig({
   build: {
     lib: {
       entry: {
-        // Component Library Bundles
+        // Manually curated component bundle
         index: 'src/index.ts',
-        // components: 'src/components/index.ts',
-        // Individual Component Bundles
-        // component1: 'src/components/component1.ts',
-        // component2: 'src/components/component2.ts',
-        // Add more components as needed.
+        // Individual components
         ...Object.fromEntries(
           glob
             .sync('src/components/**/*.ts', {
@@ -73,11 +56,5 @@ export default defineConfig({
       },
       formats: ['es'],
     },
-    // minify: false,
-    // rollupOptions: {
-    //   output: {
-    //     dir: 'dist', // Specify the correct directory for Vite to serve files
-    //   },
-    // },
   },
 });
