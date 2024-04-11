@@ -1,0 +1,28 @@
+import { Meta } from '@storybook/addon-docs';
+import { OutlineExample } from '../outline-example';
+
+<Meta
+  title="Outline Core/Example"
+  parameters={{
+    viewMode: 'docs',
+    previewTabs: {
+      canvas: {
+        hidden: true,
+      },
+    },
+  }}
+/>
+
+# `OutlineExample`: `outline-example`
+
+> This is an `outline-example` component.
+> This component is a wrapper around an anchor tag that provides styles for links.
+> This component extends `LitElement` and adds custom styling.
+
+<outline-example><a href="https://github.com/phase2/outline" class="sb-unstyled">Outline</a></outline-example>
+
+```html
+<outline-example>
+  <a href="https://github.com/phase2/outline">Outline</a>
+</outline-example>
+```
