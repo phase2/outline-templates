@@ -1,4 +1,0 @@
-outline-link {
-  /* This is just here to demonstrate using a nested import in a CSS file. */
-  @nested-import './outline-link.imported.css';
-}
