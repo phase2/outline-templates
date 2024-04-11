@@ -6,7 +6,7 @@ import encapsulatedStyles from './styles/outline-example.encapsulated.css?inline
 import { AdoptedStyleSheets } from '../../../controllers/adopted-stylesheets';
 
 /**
- * Link component.
+ * Example component.
  *
  * @see {@link https://lit.dev/docs/components/defining/ | Defining components}
  * @see {@link https://www.npmjs.com/package/@phase2/outline-example-alert | @phase2/outline-example-alert }
@@ -21,9 +21,8 @@ export class OutlineExample extends LitElement {
   });
 
   /**
-   * Overrides the render method from the parent class to wrap the rendered content
-   * in a div with the class "encapsulated-container". This demonstrates the difference
-   * between encapsulated and light DOM styling.
+   * Wrapping the rendered content in a div with the class "encapsulated-container".
+   * This demonstrates the difference between encapsulated and light DOM styling.
    *
    * @category rendering
    * @returns {TemplateResult} The template to render.
