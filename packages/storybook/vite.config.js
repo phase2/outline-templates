@@ -54,10 +54,10 @@ export default defineConfig({
             .sync('src/components/**/*.ts', {
               ignore: ['src/components/index.ts'],
             })
-            .map((file) => [
+            .map(file => [
               `components/${file.replace(/^src\/components\/|\.ts$/g, '')}`,
               file,
-            ]),
+            ])
         ),
       },
       formats: ['es'],
