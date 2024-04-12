@@ -44,13 +44,11 @@
     "node": ">=20"
   },
   "dependencies": {
+    "@phase2/outline-adopted-stylesheets-controller": "^1.0.4",
+    "@phase2/outline-config": "^0.0.14",
     "lit": "^3.1.2"
   },
   "devDependencies": {
-    "@phase2/outline-adopted-stylesheets-controller": "^1.0.4",
-    "@phase2/outline-config": "^0.0.14",
-    "@phase2/outline-core-alert": "^0.0.4",
-    "@phase2/outline-docs": "^0.0.21",
     "@storybook/addon-essentials": "^7.6.17",
     "@storybook/addon-links": "^7.6.17",
     "@storybook/blocks": "^7.6.17",
