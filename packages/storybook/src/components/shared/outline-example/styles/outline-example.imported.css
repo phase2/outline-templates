@@ -1,9 +1,9 @@
 a {
+  transition: border-color 0.3s ease;
+  border-bottom: 5px solid red;
   color: purple;
   font-weight: bold;
   text-decoration: none;
-  border-bottom: 5px solid red;
-  transition: border-color 0.3s ease;
 
   &:hover {
     border-color: transparent;
