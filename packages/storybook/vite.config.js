@@ -8,6 +8,7 @@ import postcssNested from 'postcss-nested';
 import postcssNestedImport from 'postcss-nested-import';
 import postcssDiscardComments from 'postcss-discard-comments';
 import ts from 'vite-plugin-ts';
+import { terser } from 'rollup-plugin-terser';
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -55,6 +56,25 @@ export default defineConfig({
         ),
       },
       formats: ['es'],
+    },
+    rollupOptions: {
+      plugins: [
+        terser({
+          format: {
+            comments: false,
+          },
+          mangle: {
+            keep_classnames: false,
+            reserved: [],
+          },
+        }),
+      ],
+    },
+    minify: 'terser',
+    sourcemap: true,
+    target: 'esnext',
+    TerserOptions: {
+      maxWorkers: 16,
     },
   },
 });
