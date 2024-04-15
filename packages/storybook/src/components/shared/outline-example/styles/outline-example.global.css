@@ -1,4 +1,4 @@
-outline-link {
+outline-example {
   /* This is just here to demonstrate using a nested import in a CSS file. */
-  @nested-import './outline-link.imported.css';
+  @nested-import './outline-example.imported.css';
 }

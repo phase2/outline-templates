@@ -11,7 +11,7 @@
 // import { Component1 } from './components/component1';
 // import { Component2 } from './components/component2';
 // import { OutlineAlert } from './components/shared/outline-alert/outline-alert';
-import { OutlineLink } from './components/shared/outline-link/outline-link';
+import { OutlineExample } from './components/shared/outline-example/outline-example';
 // import { OutlineCoreLink } from '@phase2/outline-core-link';
 // Add more component imports as needed...
 
@@ -24,7 +24,7 @@ import { OutlineLink } from './components/shared/outline-link/outline-link';
 // Exporting all imported components and controllers for external use
 export {
   // OutlineAlert,
-  OutlineLink,
+  OutlineExample,
   // OutlineCoreLink,
   // Component1,
   // Component2,
