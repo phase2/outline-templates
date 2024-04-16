@@ -10,9 +10,7 @@
 // Importing specific components from the `src/components` directory
 // import { Component1 } from './components/component1';
 // import { Component2 } from './components/component2';
-// import { OutlineAlert } from './components/shared/outline-alert/outline-alert';
 import { OutlineExample } from './components/shared/outline-example/outline-example';
-// import { OutlineCoreLink } from '@phase2/outline-core-link';
 // Add more component imports as needed...
 
 // Importing specific controllers from the `src/controllers` directory
