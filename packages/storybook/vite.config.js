@@ -11,6 +11,17 @@ import ts from 'vite-plugin-ts';
 
 // https://vitejs.dev/config/
 export default defineConfig({
+  base: './',
+  plugins: [ts()],
+  optimizeDeps: {
+    esbuildOptions: {
+      tsconfigRaw: {
+        compilerOptions: {
+          experimentalDecorators: true,
+        },
+      },
+    },
+  },
   css: {
     postcss: {
       plugins: [

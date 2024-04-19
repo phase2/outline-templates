@@ -44,6 +44,7 @@
     "node": ">=20"
   },
   "dependencies": {
+    "@phase2/outline-core-link": "^0.0.16",
     "lit": "^3.1.2"
   },
   "devDependencies": {

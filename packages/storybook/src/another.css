@@ -1,0 +1,6 @@
+/* Second CSS file to demo the need to individually reference them and show they combine on build */
+a {
+  &.special-link {
+    font-size: 24pt;
+  }
+}

@@ -12,7 +12,7 @@
 // import { Component2 } from './components/component2';
 // import { OutlineAlert } from './components/shared/outline-alert/outline-alert';
 import { OutlineExample } from './components/shared/outline-example/outline-example';
-// import { OutlineCoreLink } from '@phase2/outline-core-link';
+import { OutlineCoreLink } from '@phase2/outline-core-link';
 // Add more component imports as needed...
 
 // Importing specific controllers from the `src/controllers` directory
@@ -20,12 +20,16 @@ import { OutlineExample } from './components/shared/outline-example/outline-exam
 // import { Controller1 } from './controllers/controller1';
 // import { Controller2 } from './controllers/controller2';
 // Add more controller imports as needed...
+// CSS Imports - reference css files here so that they aggregate in style.css in the 
+// produced package
+import './global.css';
+import './another.css';
 
 // Exporting all imported components and controllers for external use
 export {
   // OutlineAlert,
   OutlineExample,
-  // OutlineCoreLink,
+  OutlineCoreLink,
   // Component1,
   // Component2,
   // Add more component exports as needed...

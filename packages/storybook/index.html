@@ -7,13 +7,29 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Component Test Page</title>
   <script src="/src/index.ts" type="module"></script>
+  <!--
+    the following file is public/global.css, it will not have postcss processing
+    run on it and will be copied as is into the dist directory upon a build.
+  -->
   <link rel="stylesheet" href="/global.css" />
+  <!--
+    the following files have to be referenced individually for development but roll up into a single style.css
+    file in the built package, see comments in src/index.ts for more info and to control the files bundled.
+    These files are processed by postcss.
+
+    -- need to validate this statement as chrome and safari seem like they may handle them the same. The files
+    -- through vite definitely look like javascript
+    These also need to be referenced as javascript files instead of as css files because of vite's wrapping of them.
+  -->
+  <script src="/src/global.css" type="module" /></script>
+  <script src="/src/another.css" type="module" /></script>
 </head>
 
 <body>
   <p><outline-core-link><a href="https://github.com/phase2/outline">outline-core-link</a></outline-core-link></p>
-  <p><outline-link><a href="https://github.com/phase2/outline">outline-link</a></outline-link></p>
+  <p><outline-link><a href="https://github.com/phase2/outline">outline-link must be implemented by the project</a></outline-link></p>
   <p><a href="https://github.com/phase2/outline">Normal a tag link</a></p>
+  <p><a href="https://no.such.domain.to.demo.difference.in.visited.psuedo.class/" class="special-link">Link with class declaration</a></p>
 </body>
 
 </html>

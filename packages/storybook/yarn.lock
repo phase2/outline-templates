@@ -2559,6 +2559,16 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@phase2/outline-core-link@npm:^0.0.16":
+  version: 0.0.16
+  resolution: "@phase2/outline-core-link@npm:0.0.16"
+  dependencies:
+    "@phase2/outline-adopted-stylesheets-controller": "npm:^1.0.4"
+    lit: "npm:^3.1.2"
+  checksum: 10c0/ec614c2e53b83caba268789b66797183638a3ee687b0a42386fbdbceff1b0fe4ec6ca6be77afc3ae3b5053c246dedcea97568f152c5c68884c371688ff22e391
+  languageName: node
+  linkType: hard
+
 "@phase2/outline-core@npm:^0.2.7":
   version: 0.2.7
   resolution: "@phase2/outline-core@npm:0.2.7"
@@ -2585,6 +2595,7 @@ __metadata:
     "@phase2/outline-adopted-stylesheets-controller": "npm:^1.0.4"
     "@phase2/outline-config": "npm:^0.0.14"
     "@phase2/outline-core-alert": "npm:^0.0.4"
+    "@phase2/outline-core-link": "npm:^0.0.16"
     "@phase2/outline-docs": "npm:^0.0.21"
     "@storybook/addon-essentials": "npm:^7.6.17"
     "@storybook/addon-links": "npm:^7.6.17"
