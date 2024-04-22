@@ -22,6 +22,7 @@ import { OutlineCoreLink } from '@phase2/outline-core-link';
 // Add more controller imports as needed...
 // CSS Imports - reference css files here so that they aggregate in style.css in the 
 // produced package
+import '../outline.theme.css';
 import './global.css';
 import './another.css';
 

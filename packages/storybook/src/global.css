@@ -2,6 +2,6 @@
 a {
     color: purple;
     &:visited {
-      color: green;
+      color: var(--brand-secondary);
     }
   }
